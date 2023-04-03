@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import { data } from "./data";
 
@@ -6,13 +6,14 @@ import { data } from "./data";
 import Navigation from "./components/Navigation";
 import Products from "./components/Products";
 import ShoppingCart from "./components/ShoppingCart";
+import { CartContex } from "./contexts/CartProvider";
 
 function App() {
-  const [cart, setCart] = useState([]);
+  
 
   return (
     <div className="App">
-      <Navigation cart={cart} />
+      <Navigation />
 
       {/* Routelar */}
       <main className="content">
